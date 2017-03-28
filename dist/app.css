@@ -1,0 +1,10 @@
+h1{
+    color:purple;
+}
+img{
+    height:200px;
+    width:200px;
+    background-size:cover;
+    background-image:url(images/timg.jpg); 
+}h1 {
+  font-size: 100px; }
