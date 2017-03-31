@@ -2,7 +2,12 @@
 import Vue from 'vue'
 //引入vue-router
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+//引入vue-resource
+import VueResource from 'vue-resource'
+Vue.use(VueResource);
+//设置请求发送的方式
+Vue.http.options.emulateJSON = true;
 //引入自己的组件
 import App from '../App.vue'
 import LoginCom from '../components/Login.vue'

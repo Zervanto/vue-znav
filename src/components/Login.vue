@@ -4,13 +4,15 @@
     <input type="text" v-model="name"> 
     <hr>
     <div>{{name | strToUpperCase | sliceName(6)}}</div>
+    <div>{{fullname}}</div>
 </div>
 </template>
 <script>
     export default{
         data(){
             return {
-                name:''
+                name:'',
+                firstname:'zhao'
             }
         },
         filters:{
@@ -23,6 +25,11 @@
             //    }
                 return name.length>5?name.slice(0,length)+'...':name.slice(0,length);
                 // return name.slice(0,5)+'...'
+            }
+        },
+        computed:{
+            fullname(){
+                return this.firstname+'(^@^)'+this.name;
             }
         }
     }
