@@ -12,7 +12,10 @@ Vue.http.options.emulateJSON = true;
 import App from '../App.vue'
 import LoginCom from '../components/Login.vue'
 import RegisterCom from '../components/Register.vue'
-
+import BaiduCom from '../components/baidu.vue'
+import SlideCom from '../components/slide.vue'
+Vue.component('baidu',BaiduCom)
+Vue.component('slide',SlideCom)
 var router = new VueRouter({
     routes:[//所有路由规则都存在于该数组下面
         {name:'login',path:'/login',component:LoginCom},
@@ -28,3 +31,4 @@ new Vue({
     //     return createElements(App);
     // }
 });
+
