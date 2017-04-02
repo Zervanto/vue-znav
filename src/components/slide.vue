@@ -123,64 +123,7 @@
     export default{
         data(){
             return{
-
             }
-        },
-        methods:{
-            animate(obj, target){
-                    clearInterval(obj.timer);
-    obj.timer = setInterval(function () {
-        var leader = obj.offsetLeft;
-        var step = 30;
-        step = leader < target ? step : -step;
-        if (Math.abs(target - leader) >= Math.abs(step)) {
-            leader = leader + step;
-            obj.style.left = leader + "px";
-        } else {
-            obj.style.left = target + "px";
-            clearInterval(obj.timer);
-        }
-    }, 15);
-            },
-            slide(i){
-                 var slide = document.querySelectorAll('.slide')[i];
-    var box = slide.children[0];
-    var ul = box.children[0];
-    var lis = ul.children;
-    var left = slide.querySelector('.left');
-    var right = slide.querySelector('.right');
-    var imgWidth = box.offsetWidth;
-    //克隆第一张图片,并添加
-    var firstImg = lis[0].cloneNode(true);
-    ul.appendChild(firstImg);
-    var pic = 0;//记录当前显示的图片的索引
-    //点击右箭头 移动ul到相应位置
-    right.onclick = function () {
-        //如果是最后一张 就应该 瞬间跳回开始 然后让ul从真的第一张渐渐地移动到第二张
-        if (pic === lis.length - 1) {
-            ul.style.left = 0;
-            pic = 0;
-        }
-        pic++;//计算接下来要显示的图片的索引
-        //目标 和pic有关 和图片宽度有关 而且是负数
-        var target = -pic * imgWidth;
-        animate(ul, target);
-    };
-    left.onclick = function () {
-        //如果是第一张 就应该 瞬间跳回最后 然后让ul从假的第一张渐渐地移动到真的最后一张
-        if (pic === 0) {
-            ul.style.left = -(lis.length - 1) * imgWidth + "px";
-            pic = lis.length - 1;//pic要变到最后
-        }
-        pic--;//计算接下来要显示的图片的索引
-        //目标 和pic有关 和图片宽度有关 而且是负数
-        var target = -pic * imgWidth;
-        animate(ul, target);
-    };
-            }
-        },
-        created:{
-
         }
     }
 </script>

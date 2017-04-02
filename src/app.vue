@@ -14,6 +14,7 @@
     </div>
 </header>  
 <baidu></baidu>
+<slide></slide>
     <router-link to="/login">登录</router-link>
     <router-link to="/register">注册</router-link>
     <router-view></router-view>
@@ -35,7 +36,7 @@
         },
         created(){
             this.getData();
-        }
+        },
     }
 </script>
 <style scoped>
