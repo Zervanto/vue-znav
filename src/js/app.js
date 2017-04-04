@@ -1,5 +1,19 @@
 //引入vue组件库
 import Vue from 'vue'
+//引入vue-awesome-swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper);
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+export default {
+  components: {
+    swiper,
+    swiperSlide
+  }
+}
+//引入MintUI 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI);
 //引入vue-router
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
