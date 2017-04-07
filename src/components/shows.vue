@@ -1,6 +1,6 @@
 <template>
 <div>
-    <p>this is register page</p>
+    <p>shows</p>
 </div>
 </template>
 <script>

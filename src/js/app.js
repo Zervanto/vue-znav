@@ -14,7 +14,6 @@ export default {
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI);
-//引入vue-router
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 //引入vue-resource
@@ -24,16 +23,21 @@ Vue.use(VueResource);
 Vue.http.options.emulateJSON = true;
 //引入自己的组件
 import App from '../App.vue'
+import NavCom from '../components/tab.vue'
 import LoginCom from '../components/Login.vue'
-import RegisterCom from '../components/Register.vue'
+import ShowsCom from '../components/shows.vue'
 import BaiduCom from '../components/baidu.vue'
 import SlideCom from '../components/slide.vue'
+import TodosCom from '../components/todolist.vue'
+Vue.component('tab',NavCom)
 Vue.component('baidu',BaiduCom)
 Vue.component('slide',SlideCom)
+Vue.component('todos',TodosCom)
 var router = new VueRouter({
     routes:[//所有路由规则都存在于该数组下面
-        {name:'login',path:'/login',component:LoginCom},
-        {name:'register',path:'/register',component:RegisterCom}
+        {name:'slide',path:'/slide',component:SlideCom},
+        {name:'shows',path:'/shows',component:ShowsCom},
+        {name:'shows',path:'/todos',component:TodosCom}
     ]
 });
 //创建一个Vue对象
