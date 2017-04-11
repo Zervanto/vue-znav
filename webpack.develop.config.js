@@ -21,18 +21,7 @@ module.exports = {
     //webpack2的写法
     module:{
             rules:[
-                    {   
-                        test:/\.jsx?$/,
-                        exclude:/node_modules/,
-                        use:[
-                             {
-                                loader:"babel-loader",
-                               // options:{
-                                //presets:['es2015','react']
-                               // }
-                            }
-                        ]  
-                    },
+
                     //处理css
                     {
                         test:/\.css?$/,
@@ -53,8 +42,10 @@ module.exports = {
                         test:/\.(eot|woff|ttf|woff2|svg)$/,
                         use:'url-loader?limit=25000&name=images/[name].[ext]'
                     },
+                    //处理vue组件
                     {
-                        test:/\.vue$/,use:'vue-loader'
+                        test:/\.vue$/,
+                        use:'vue-loader'
                     }
             ]
     },

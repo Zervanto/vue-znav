@@ -4,10 +4,10 @@
         <div class="logo">Znav</div>
         <nav class="nav">
             <ul>
-                <li><router-link to="/slide">sites</router-link></li>
-                <li><router-link to="/shows">shows</router-link></li>
+                <li><router-link to="/">sites</router-link></li>
+                <li><router-link to="/category">shows</router-link></li>
                 <li><router-link to="/todos">todos</router-link></li>
-                <li><router-link to="/books">books</router-link></li>
+                <li><a href="http://zervanto.farbox.com/">blog</a></li>
             </ul>
         </nav>
     </div>

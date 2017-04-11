@@ -11,9 +11,9 @@ export default {
   }
 }
 //引入MintUI 
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(MintUI);
+// import MintUI from 'mint-ui'
+// import 'mint-ui/lib/style.css'
+// Vue.use(MintUI);
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 //引入vue-resource
@@ -25,7 +25,7 @@ Vue.http.options.emulateJSON = true;
 import App from '../App.vue'
 import NavCom from '../components/tab.vue'
 import LoginCom from '../components/Login.vue'
-import ShowsCom from '../components/shows.vue'
+import CateCom from '../components/category.vue'
 import BaiduCom from '../components/baidu.vue'
 import SlideCom from '../components/slide.vue'
 import TodosCom from '../components/todolist.vue'
@@ -35,9 +35,9 @@ Vue.component('slide',SlideCom)
 Vue.component('todos',TodosCom)
 var router = new VueRouter({
     routes:[//所有路由规则都存在于该数组下面
-        {name:'slide',path:'/slide',component:SlideCom},
-        {name:'shows',path:'/shows',component:ShowsCom},
-        {name:'shows',path:'/todos',component:TodosCom}
+        {name:'slide',path:'/',component:SlideCom},
+        {name:'shows',path:'/category',component:CateCom},
+        {name:'todos',path:'/todos',component:TodosCom}
     ]
 });
 //创建一个Vue对象

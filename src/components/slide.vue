@@ -1,8 +1,5 @@
 <template>
   <div class="slide wrap">
-  <md-card>
-
-    <md-card-media>
       <!-- swiper -->
       <swiper :options="swiperOption">
         <swiper-slide>
@@ -14,7 +11,8 @@
                        <img src="images/bilibili.jpg" alt="">
                    </a>
         </swiper-slide>
-        <swiper-slide> <a href="https://www.taobao.com/">
+        <swiper-slide> 
+        <a href="https://www.taobao.com/">
                        <img src="images/taobao.jpg" alt="">
                    </a></swiper-slide>
         <swiper-slide><a href="http://www.gamersky.com">
@@ -32,8 +30,9 @@
         <swiper-slide><a href="https://segmentfault.com/">
                        <img src="images/sf.jpg" alt="">
                    </a></swiper-slide>
-        <swiper-slide> <a href="http://www.51cto.com/">
-                       <img src="images/51cto.jpg" alt="">
+        <swiper-slide> 
+        <a href="https://developer.mozilla.org/zh-CN/">
+                       <img src="images/mdn.jpg" alt="">
                    </a></swiper-slide>
         <swiper-slide><a href="https://github.com/">
                        <img src="images/github.jpg" alt="">
@@ -58,9 +57,7 @@
                 <div class="swiper-button-prev" slot="button-prev"></div>
 <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
-    </md-card-media>
 
-        <md-card-media>
       <!-- swiper -->
       <swiper :options="swiperOption">
         <swiper-slide>
@@ -79,8 +76,8 @@
         <swiper-slide> <a href="https://www.youtube.com">
                       <img src="images/youtube.jpg" alt="">
                    </a></swiper-slide>
-        <swiper-slide><a href="https://github.com/">
-                       <img src="images/github.jpg" alt="">
+        <swiper-slide><a href="https://www.quora.com/">
+                       <img src="images/quora.jpg" alt="">
                    </a></swiper-slide>
         <swiper-slide><a href="https://twitter.com/?lang=zh-cn">
                       <img src="images/twitter.jpg" alt="">
@@ -117,11 +114,7 @@
                 <div class="swiper-button-prev" slot="button-prev"></div>
 <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
-    </md-card-media>
-
-
-  </md-card>
-  </div>
+</div>
 </template>
 
 <script>

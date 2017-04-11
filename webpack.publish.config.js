@@ -9,7 +9,7 @@ var extractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry:{
         app:path.resolve(__dirname,'src/js/app.js'),
-        vendors:['react','react-dom']
+        vendors:['vue']
     },
     output:{
         path:path.resolve(__dirname,'dist'),
@@ -17,10 +17,14 @@ module.exports = {
     },
     module:{
             rules:[
-                    {   
-                        test:/\.jsx?$/,
-                        exclude:/node_modules/,
-                        use:"babel-loader" 
+                    {
+                        test: /\.js?$/,
+                        use: 'babel-loader'                    
+                    },
+                     //处理vue组件
+                    {
+                        test:/\.vue?$/,
+                        use:'vue-loader'
                     },
                     //处理css
                     {
@@ -42,12 +46,14 @@ module.exports = {
                     //处理图片25000bit = 3kb
                     {
                         test:/\.(png|jpg|jpeg|gif)$/,
-                        use:'url-loader?limit=25000&name=images/[name].[ext]'
+                        // use:'url-loader'
+                        use:'url-loader?limit=250000&name=images/[name].[ext]'
                     },
                     //处理字体
                     {
                         test:/\.(eot|woff|ttf|woff2|svg)$/,
-                        use:'url-loader?limit=25000&name=images/[name].[ext]'
+                        // use:'url-loader'
+                        use:'url-loader?limit=250000&name=images/[name].[ext]'
                     },
             ]
     },
