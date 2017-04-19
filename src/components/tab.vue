@@ -19,7 +19,7 @@
             return {
                 
             }
-        }
+        }      
     }
 </script>
 <style scoped>
@@ -46,6 +46,10 @@
 .nav ul li {
     float: left;
     margin: 0 10px ;
+}
+.nav ul li:hover {
+    background-color:#FFF;
+    border:1px solid #555;
 }
 .nav ul li a{
     height: 50px;
